@@ -27,7 +27,7 @@ class LoginController extends Controller
         }
 
         return response()->json([
-            'message' => 'Email/Username or Password mismatch',
+            'message' => 'Email or password is incorrect',
         ], Response::HTTP_UNAUTHORIZED);
     }
 }

@@ -18,7 +18,7 @@ class RegisterController extends Controller
     // register and logged in
     public function __invoke(RegisterRequest $request)
     {
-        $data = $request->only('name', 'email', 'username', 'password', 'user_type');
+        $data = $request->only('name', 'email', 'password');
         $user = User::create($data);
         $token = $user->createToken('Laravel Password Grant Client')->plainTextToken;
 
